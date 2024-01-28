@@ -31,7 +31,7 @@ def main():
     print("Checking subject: " + subject)
     for term in term_rows.find_all("tr")[1:]:
       term_cols = term.find_all("td")
-      if term_cols[5].text == "cvičenie":
+      if term_cols[5].text in ["cvičenie", "semestrálna práca", "zápočet"]:
         continue
 
       datetime = term_cols[0].text
